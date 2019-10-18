@@ -8,7 +8,7 @@
 */
 
 function consume(a, b, cb) {
-  cb(a, b);
+  return cb(a, b);
 };
 
 /* Step 2: Create several functions to callback with consume();
@@ -30,16 +30,16 @@ function greeting(first, last) {
 };
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: Closure creates the situation where the variable internal can be accessed by a nested function because child elements will inherit the 'knowledge' of their parents, but this does not work in the other direction.
 
 
 const external = "I'm outside the function";
